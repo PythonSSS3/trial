@@ -1,0 +1,180 @@
+/* Leaderboard cosmetic styles */
+.leader-title-badge{
+  display:inline-flex;
+  align-items:center;
+  margin-left:6px;
+  padding:2px 7px;
+  border:1px solid rgba(181,140,255,.45);
+  border-radius:999px;
+  background:rgba(139,92,246,.12);
+  color:#c9adff;
+  font-size:11px;
+  font-weight:900;
+  line-height:1.2;
+  vertical-align:middle;
+  white-space:nowrap;
+}
+@media(max-width:520px){
+  .leader-title-badge{margin-left:4px;padding:2px 6px;font-size:8px}
+}
+
+
+/* =========================================================
+   LEADERBOARD COSMETICS
+   Shows the currently equipped title, text style, accessory
+   and animated effect directly on each leaderboard row.
+   ========================================================= */
+
+.leader{
+  position:relative;
+  overflow:visible;
+}
+
+.leader.has-cosmetics{
+  border-radius:12px;
+  padding-left:9px;
+  padding-right:9px;
+}
+
+.leader-cosmetics{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-top:5px;
+  min-height:16px;
+}
+
+.leader-cosmetic{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  line-height:1;
+  white-space:nowrap;
+}
+
+.leader-title-badge{
+  display:inline-flex;
+  align-items:center;
+  margin-left:7px;
+  padding:5px 10px;
+  border:1px solid rgba(181,140,255,.45);
+  border-radius:999px;
+  background:rgba(139,92,246,.12);
+  color:#c9adff;
+  font-size:11px;
+  font-weight:900;
+  line-height:1.2;
+  vertical-align:middle;
+  white-space:nowrap;
+}
+
+.leader-accessory{
+  padding:5px 8px;
+  font-size:20px;
+  background:rgba(255,255,255,.045);
+  border:1px solid rgba(255,255,255,.08);
+  animation:leaderAccessoryFloat 2.2s ease-in-out infinite;
+}
+
+.leader-effect{
+  font-size:20px;
+  background:transparent;
+  filter:drop-shadow(0 0 8px rgba(181,140,255,.5));
+  animation:leaderEffectPulse 1.35s ease-in-out infinite;
+}
+
+.leader-effect-fire{animation:leaderFire 1s ease-in-out infinite}
+.leader-effect-spark{animation:leaderSpark 1.15s ease-in-out infinite}
+.leader-effect-lightning{animation:leaderLightning .85s ease-in-out infinite}
+
+.leader-title-row{
+  display:inline-flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:3px;
+}
+
+.leader-style-neon{
+  background:linear-gradient(90deg,#c4a6ff,#7de7f4);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 0 14px rgba(139,92,246,.22);
+}
+.leader-style-serif{font-family:Georgia,serif;font-style:italic}
+.leader-style-terminal{font-family:ui-monospace,monospace;letter-spacing:.05em}
+.leader-style-wide{letter-spacing:.22em}
+.leader-style-glow{text-shadow:0 0 7px #fff,0 0 16px rgba(139,92,246,.7)}
+.leader-style-royal{font-family:Georgia,serif;font-weight:950;letter-spacing:.05em}
+
+.leader-crown{
+  position:absolute;
+  left:37px;
+  top:-15px;
+  z-index:3;
+  font-size:22px;
+  line-height:1;
+  filter:drop-shadow(0 0 7px rgba(255,210,80,.55));
+  animation:leaderCrownFloat 2s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.leader-avatar-accessory{
+  position:absolute;
+  left:32px;
+  top:29px;
+  z-index:3;
+  font-size:18px;
+  line-height:1;
+  filter:drop-shadow(0 0 6px rgba(255,255,255,.25));
+  pointer-events:none;
+}
+
+.leader-row-effect{
+  position:absolute;
+  right:40px;
+  top:1px;
+  font-size:19px;
+  pointer-events:none;
+  z-index:2;
+}
+
+.leader-row-effect span{
+  display:inline-block;
+}
+
+@keyframes leaderAccessoryFloat{
+  0%,100%{transform:translateY(0) rotate(-2deg)}
+  50%{transform:translateY(-3px) rotate(2deg)}
+}
+@keyframes leaderEffectPulse{
+  0%,100%{transform:scale(.9);opacity:.65}
+  50%{transform:scale(1.18);opacity:1}
+}
+@keyframes leaderFire{
+  0%,100%{transform:translateY(1px) scale(.9) rotate(-4deg);opacity:.75}
+  50%{transform:translateY(-4px) scale(1.2) rotate(4deg);opacity:1}
+}
+@keyframes leaderSpark{
+  0%,100%{transform:scale(.75) rotate(0);opacity:.45}
+  50%{transform:scale(1.35) rotate(18deg);opacity:1}
+}
+@keyframes leaderLightning{
+  0%,100%{transform:scale(.85);opacity:.5}
+  35%{transform:scale(1.3);opacity:1}
+  45%{transform:scale(.95);opacity:.65}
+}
+@keyframes leaderCrownFloat{
+  0%,100%{transform:translateY(0) rotate(-3deg)}
+  50%{transform:translateY(-4px) rotate(3deg)}
+}
+
+@media(max-width:520px){
+  .leader-title-badge{margin-left:5px;padding:4px 8px;font-size:10px}
+  .leader-crown{left:35px;font-size:19px;top:-13px}
+  .leader-avatar-accessory{left:31px;font-size:15px}
+  .leader-row-effect{right:33px;font-size:17px}
+  .leader-cosmetics{gap:3px}
+}

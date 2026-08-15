@@ -1,0 +1,6 @@
+/* Titles / text-style styles */
+.style-neon{background:linear-gradient(90deg,#c4a6ff,#7de7f4);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 14px rgba(139,92,246,.22)}
+.style-serif{font-family:Georgia,serif;font-style:italic}.style-terminal{font-family:ui-monospace,monospace;letter-spacing:.05em}.style-wide{letter-spacing:.22em}.style-glow{text-shadow:0 0 7px #fff,0 0 16px rgba(139,92,246,.7)}.style-royal{font-family:Georgia,serif;font-weight:950;letter-spacing:.05em}
+.live-emoji{animation:emojiFloat 1.6s ease-in-out infinite;filter:drop-shadow(0 0 10px rgba(181,140,255,.35))}@keyframes emojiFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-7px) rotate(3deg)}}
+.equipped-chip{display:inline-flex;align-items:center;padding:7px 9px;border:1px solid #3b334e;border-radius:999px;background:#15131b;color:#cbbaff;font-size:9px;margin:3px 3px 3px 0}
+
